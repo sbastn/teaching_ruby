@@ -23,7 +23,7 @@ class Array2
   end
 
   def insert(index, object)
-    @elements.insert(index, object)
+    @elements.insert(index.abs, object)
     self
   end
 

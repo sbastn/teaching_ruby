@@ -76,7 +76,6 @@ describe Array2 do
     end
   end
 
-=begin
   describe '#insert index, object' do
     let(:index)  { 2 }
     let(:object) { 'new element' }
@@ -102,14 +101,14 @@ describe Array2 do
 
     context 'if there is no such index at array' do
       it 'inserts the element there and feels the empty positions with nil' do
-        array.insert(6, object)
+        array.insert(6, object).should be array
       end
     end
 
     context 'with negative indexes' do
       context 'if there is an element with that index' do
         it 'behaves as if the index were positive' do
-
+          array.insert(-1, object).elements.should eq [1, "new element", "a", 2, "b"]
         end
       end
 
@@ -134,5 +133,4 @@ describe Array2 do
       array2.delete_at(99).should eq nil
     end
   end
-=end
 end
