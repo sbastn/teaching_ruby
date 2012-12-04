@@ -111,10 +111,6 @@ describe Array2 do
           array.insert(-1, object).elements.should eq [1, "new element", "a", 2, "b"]
         end
       end
-
-      context 'if there is no element with that index' do
-        it 'raises an error'
-      end
     end
   end
 
